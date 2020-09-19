@@ -1,0 +1,359 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+     
+	<title>DoodleBlues Design</title>
+	<link rel="stylesheet"  href="./Css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+<script type="">
+	function validationform() {
+		
+		var fstname=document.getElementById("fname").value;
+		var lstname=document.getElementById('lname').value;
+		var mail=document.getElementById("email").value;
+		var pwd=document.getElementById("inpassword").value;
+		var cell=document.getElementById("contact").value;
+		var Message=document.getElementById("mess").value;
+
+
+		if (fstname==null || fstname=="") {
+			alert( "Enter the First Name");
+			return false;
+		}else{ lettersOnly()}
+
+		 if(lstname==null || lstname=="") {
+			alert( "Enter the Last Name");
+			return false;
+		}else{ 
+			lettersOnly()
+	
+		}
+
+        if(mail==null ||mail=="" ) {
+	       alert("Enter the Mail Id");
+	       return false;
+        }else{
+        	validateUser(mail)
+        }
+	
+        if (pwd==null || pwd=="") {
+        	alert("Enter the Password");
+        	return false;
+        }
+        else{
+        	if(validatepass(pwd)==false)
+                return false;
+        }
+
+        if(cell==null ||cell=="" ) {
+	       alert("Enter the Phone Number");
+	       return false;
+        }
+
+        if(Message==null ||cell=="" ) {
+	       alert("Enter the Message");
+	       return false;
+        }
+	}
+
+
+
+
+		function lettersOnly() 
+			{
+            var charCode = event.keyCode;
+
+            if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123) || charCode == 8 ||charCode == 32)
+
+                return true;
+            else
+            	return false;
+                
+				}
+
+			function validateUser(mail) {
+  
+   			var mal= new RegExp (/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+      
+   					if (mail.match(mal)) {
+    				  return false;
+   						 alert("Enter the mail ");
+  						 }
+  					 else {
+     					 alert("Incorrect Mail");
+     				 return false;
+ 					  }
+					}
+
+		function validatepass(pwd){
+		var pas= "^(?=.*[0-9])" + "(?=.*[a-z])(?=.*[A-Z])"+ "(?=.*[@#$%^&+=])"+ "(?=\\S+$).{8,20}$"; 
+		if(pwd.match(pas)){
+			return false;
+			alert("Enter the password");
+			}
+		else{
+			alert("Password need 8 characters with A ,a,@,9 with these Special Characters");
+			}
+			}
+
+			function numb(kcode, val) {
+
+			if ( isNaN(val + String.fromCharCode(kcode.keyCode) )) {
+				return false;
+			}
+			}
+
+
+</script>
+
+		<div class="container" style="padding: 7px;
+    font-size: 12px;">
+			<div class="symbol" ><i class="fa fa-envelope-o" aria-hidden="true"></i> support@<strong>email </strong>doodleblues.com</i> </div>
+			<div class="symbol"  style="float: right;margin-top: -20px; "><i class="fa fa-phone-square" aria-hidden="true"></i><strong> Call</strong>+1233444455</div>
+</div>
+
+	<header>
+		<div class="container">
+			<div id="block">
+			<h1><span class="spark">Doodle Blues</span></h1>
+		</div>
+		
+	<nav>
+		<ul>
+			<li class="current">
+				<a href="./index.html">Home</a>
+			</li>
+			
+		</ul>
+</nav>
+</div>
+	</header>
+	
+<section id="content">
+	<div class="container">
+		<p>Provide business solutions<p>
+			<h1>Your business <strong>success</strong>
+is our <strong>business</strong></h1>
+<p>Browse our open positions and pick the challenge that
+excites you the most</p></h1>
+<button type="button" class="button_1">Services</button>
+<button type="button" class="button_1">Contact us</button>
+	</div>
+	
+</section >
+
+<section id="slide" style="width: 70px,padding:10px">
+	<div class="container " >
+	<img src="./img/ss.jpg">
+
+
+	<img src="./img/sss.jpg">
+	</div>
+	</div>
+
+</section>
+
+
+
+
+<section id="boxes">
+      <div class="container">
+
+		<h1 style="text-align: center;color:#3f78e3">Service we provide</h1>
+        <div class="box">
+        	<i class="fa fa-th fa-3x" aria-hidden="true"></i>
+       
+          <h3 >Capital Market</h3>
+          <p>Impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est.</p>
+        </div>
+        <div class="box">
+        	<i class="fa fa-address-card-o fa-3x" aria-hidden="true"></i>
+         <h3 >Technology Advisory</h3>
+          <p>Impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est.</p>
+        </div>
+
+        <div class="box">
+        <i class="fa fa-usd fa-3x" aria-hidden="true"></i>
+          <h3 >Business Opportunities</h3>
+          <p>Impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est.</p>
+			</div>
+      </div>
+      <div class="container">
+        <div class="box">
+        	<i class="fa fa-indent fa-3x" aria-hidden="true"></i>
+          <h3 >Capital Market</h3>
+          <p>Impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est.</p>
+        </div>
+        <div class="box">
+       		<i class="fa fa-btc fa-3x" aria-hidden="true"></i>
+          <h3 >Technology Advisory</h3>
+          <p>Impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est.</p>
+        </div>
+
+        <div class="box">
+         <i class="fa fa-flickr fa-3x" aria-hidden="true"></i>
+          <h3 >Business Opportunities</h3>
+          <p>Impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est.</p>
+			</div>
+      </div>
+    </section>
+
+
+<section id="reg">
+  <div class="container">
+    <h1 style="text-align: center;color:#3f78e3"> Provide Support</h1>
+    
+    <div class="regg">
+      <h1 >Friendly and dedicated support every steps on the way</h1>
+      <p>Real people are availabe 24hours a day, 7 days a week to help you with whatever you need.</p>
+      <h1>140-221-547-224</h1><p>or</p>
+      <p>check out our<a href=""> online support center.</a></p>
+    </div>
+
+    <div class="regg" style="text-align: center">
+      <form>
+            <table style="text-align: center; " cellpadding="5" cellspacing="5">
+          <tr>
+        <h1 style="color: #3f78e3">Request a free consultation</h1></tr>
+        <tr>
+          
+          <td><input type="text" maxlength="20" class="control control_1" name="fname" onkeypress="return lettersOnly(event)" id="fname" placeholder="First Name" ></input></td>
+          
+           
+        <td><input type="text" id="lname" class="control control_1" maxlength="20" name="lname" onkeypress="return lettersOnly(event)"placeholder="Last Name" ></input></td></tr>
+        <tr>
+          
+          <td colspan="1"><input type="text" id="email" class="control control_1"  placeholder="Email" ></td>
+
+        <td><input type="number" maxlength="10" id="contact" class="control control_1" onkeypress="return numb(event, this.value)" placeholder="phone"></td></tr>
+
+        <tr>
+          <td  colspan="2"><textarea  placeholder="Message" class="control control_1"  id="mess"></textarea> </td></tr>
+
+          <tr>
+          <td colspan="2"><select name="state" id="state" class="control control_1">
+    <option  value="none">Select State</option>
+    <option value=" Andaman and Nicobar Islands"> Andaman and Nicobar Islands</option>
+    <option value="Andhra Pradesh">Andhra Pradesh</option>
+    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+    <option value="Assam">Assam</option>
+    <option value=" Bihar"> Bihar</option>
+    <option value="Chandigarh">Chandigarh</option>
+    <option value=" Chhattisgarh">  Chhattisgarh</option>
+   <option value=" Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option>
+    <option value="Delhi ">Delhi </option>
+    <option value="Goa">Goa</option>
+    <option value=" Gujarat"> Gujarat</option>
+    <option  value=" Haryana">Haryana</option>
+    <option value=" Himachal Pradesh"> Himachal Pradesh</option>
+    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+    <option value="Jharkhand">Jharkhand</option>
+    <option value="Karnataka">Karnataka</option>
+    <option value=" Kerala">Kerala</option>
+    <option value=" Ladakh"> Ladakh</option>
+    <option value=" Lakshadweep"> Lakshadweep</option>
+    <option value="Madhya Pradesh ">Madhya Pradesh </option>
+    <option value="Maharashtra">Maharashtra</option>
+    <option value=" Manipur"> Manipur</option>
+    <option  value="Meghalaya">Meghalaya</option>
+    <option value="Mizoram">Mizoram</option>
+    <option value="Nagaland">Nagaland</option>
+    <option value=" Odisha">  Odisha</option>
+    <option value="Puducherry">Puducherry</option>
+    <option value=" Punjab">Punjab</option>
+    <option value=" Rajasthan"> Rajasthan</option>
+    <option value=" Sikkim">Sikkim</option>
+     <option value="Tamil Nadu">Tamil Nadu</option>
+    <option value=" Telangana"> Telangana</option>
+    <option value="Tripura">Tripura</option>
+    <option value=" Uttar Pradesh">Uttar Pradesh</option>
+    <option value=" Uttarakhand">Uttarakhand</option>
+    <option value=" West Bengal"> West Bengal</option>
+</td></tr>
+  </select>
+  
+          </tr>
+        
+          <tr><td><button type="button" value="Submit" class=" field btn-lg fieldinput," onclick="validationform()">Submit</button>
+          </td></tr>
+      </table>
+      </form>
+      
+    </div>
+  </div>
+</section>
+
+<section id="boxes">
+      <div class="container">
+
+		<h1 style="text-align: center;color:#3f78e3">Our Blog</h1>
+        <div class="box">
+         <img src="./img/1.jpg" style=" width: 100%;">
+          <h3 >DISCOVER NEW BANKING TRICKS & STRATEGIES</h3>
+          <p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself.</p>
+        </div>
+        <div class="box">
+       <img src="./img/2.jpg" style=" width: 100%;">
+          <h3 >FOUR BIG MISTAKES YOUR SMALL BUSINESS IS MAKING</h3>
+          <p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself.</p>
+        </div>
+
+        <div class="box">
+          <img src="./img/3.jpg" style=" width: 100%;">
+          <h3 >HOW TO FIND THE BEST BANK FOR YOUR BUSINESS</h3>
+          <p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself.</p>
+			</div>
+      </div>
+    </section>
+
+
+<section id="newsletter">
+<div class="container">
+	<h1 style="text-align: center;color:#3f78e3">Our Newsletter</h1>
+	<div >
+	<form>
+		<input type="email" class=" control_1" placeholder="Enter Email"></input>
+		<button type="submit" class="button_1">Subscribe</button>
+	</form>
+</div>
+</div>
+
+	</div>
+</section>
+
+	 <section id="boxes">
+      <div class="container">
+        <div class="box">
+         
+          <h3 style="color:#3f78e3">About Us</h3>
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantiCum, totam rem aperiam, eaque.</p>
+        </div>
+        <div class="box">
+       
+          <h3 style="color:#3f78e3">Latest News</h3>
+          <p>Etiam dignissim sit amet felis.<br></br><a href="">21 January, 2018</a></p>
+        </div>
+        <div class="box">
+          
+          <h3 style="color:#3f78e3">Twitter Widget</h3>
+          <p>Business Consulting and Preparation.<br></br><a href="">https://twitter.com/?lang=en</a></p>
+        </div>
+      </div>
+    </section>
+ 
+<footer>
+	<div>
+		<p>Doodle Blues Copyright© 2020.</p>
+	</div>
+	
+</footer>
+</body>
+</html>
